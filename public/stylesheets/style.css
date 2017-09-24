@@ -42,7 +42,7 @@ p {
 }
 
 .disgust {
-  background-color: #0f0;
+  background-color: #009C00;
   max-width: 100%;
 }
 
@@ -52,7 +52,7 @@ p {
 }
 
 .joy {
-  background-color: #ff0;
+  background-color: #FFE600;
   max-width: 100%;  
 }
 
@@ -61,7 +61,7 @@ div.joy>p {
 }
 
 .sadness {
-  background-color: #455566;
+  background-color: #326BA3;
   max-width: 100%;
 }
 
