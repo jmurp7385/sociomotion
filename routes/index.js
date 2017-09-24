@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var Twitter = require('twitter');
+const fs = require('fs');
+
+let writeStream = fs.createWriteStream('tweets.json');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -33,13 +37,21 @@ router.get('/search/:screen_name', function(req, res, next) {
     // access_token_secret: process.env.access_token_secret
   });
 
+  var sentences = "";
   var params = {screen_name: req.params.screen_name};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
-    if (!error) {
-      // for(x=0;x < tweets.length; x++){
-      //   console.log(tweets[x]['text']);
-
-      // }
+    if (!error) {      
+      for(x=0;x < tweets.length; x++){        
+        sentences += " " + tweets[x]['text'];
+      }      
+      json = {'text': sentences};
+      var json_string = JSON.stringify(json);
+      writeStream.write(json_string);
+      writeStream.on('finish', () => {  
+          console.log('wrote all data to file');
+          console.log(tweets.json);
+          writeStream.end('end');
+      });
 
       res.render('tweets', { title: 'Tweets',tweets: tweets });
     } else {

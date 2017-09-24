@@ -4,4 +4,6 @@ block content
   h1= title
   each tweet in tweets
     p= tweet.text
-  
+  form(method='GET' action='/emotion')
+    div.form-group
+    input#search_button.form-control(type='submit', value='See Emotions')
