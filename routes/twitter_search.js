@@ -13,11 +13,11 @@ router.get('/:screen_name', function(req, res, next) {
     access_token_secret: 'hoxNk7cGvZRomAFmfsol3DW4LkmblRf6HGJzi7zu81R4C'
   });
   
-  var params = {screen_name: 'joeymurphy385'};
+  var params = {screen_name: 'joeymurphy7385', count: '200'};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {
       console.log(tweets);
-      res.render('tweets', { title: 'Tweets',tweets: tweets });
+      res.render('tweets', { title: 'Tweets', tweets: tweets });
     }
   });
 });
