@@ -12,12 +12,10 @@
     "express": "~4.15.2",
     "express-session": "^1.15.5",
     "morgan": "~1.8.1",
-    "node-twitter-api": "^1.8.0",
     "nodemon": "^1.12.1",
     "plotly": "^1.0.6",
     "pug": "~2.0.0-beta11",
     "serve-favicon": "~2.4.2",
-    "twitter": "^1.7.1",
-    "twitter-node-client": "0.0.6"
+    "twitter": "^1.7.1"
   }
 }
