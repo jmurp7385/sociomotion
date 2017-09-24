@@ -4,14 +4,14 @@ block content
     h1= title2
     div.center  
       div.row
-        button#emotional        
+        button#emotional.selected       
           p Emotional
         button#language
           p Language
         button#social
           p Social
       div#emotional-graph
-        d.border  
+        div.border  
         div.anger(style={width: anger*(1000/10)+'%'})
           p= "Anger: "
           p= (anger * (1000/10)).toFixed(2) + '%'
