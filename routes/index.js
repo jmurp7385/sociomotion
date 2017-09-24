@@ -68,8 +68,7 @@ router.get('/search/:screen_name', function(req, res, next) {
         if (error){
           console.log('error:', error);
         }
-        else {
-          console.log(response['document_tone']['tone_categories'][2]);
+        else {          
           anger             = response['document_tone']['tone_categories'][0]['tones'][0]['score'];
           disgust           = response['document_tone']['tone_categories'][0]['tones'][1]['score'];
           fear              = response['document_tone']['tone_categories'][0]['tones'][2]['score'];
@@ -84,8 +83,7 @@ router.get('/search/:screen_name', function(req, res, next) {
           conscientiousness = response['document_tone']['tone_categories'][2]['tones'][1]['score'];
           extraversion      = response['document_tone']['tone_categories'][2]['tones'][2]['score'];
           agreeableness     = response['document_tone']['tone_categories'][2]['tones'][3]['score'];
-          emotion_range     = response['document_tone']['tone_categories'][2]['tones'][4]['score'];
-          console.log(openness,conscientiousness,agreeableness,emotion_range);
+          emotion_range     = response['document_tone']['tone_categories'][2]['tones'][4]['score'];          
         }
         res.redirect('/emotion/'+anger+'/'+disgust+'/'+fear+'/'+
                       joy+'/'+sadness+'/'+analytical+'/'+confident+'/'+
