@@ -1,7 +1,8 @@
 extends layout
 
-block content 
-    h1= title2
+block content   
+    h1.title-emotions= title2
+    h1.name= name
     div.center        
       button#emotional.selected Emotional
       button#language Language
@@ -37,7 +38,7 @@ block content
         div.agreeableness(style={width: agreeableness*(1000/10)+'%'})
           p= "Agreeableness: "+(agreeableness * (1000/10)).toFixed(2) + '%'
         div.emotion_range(style={width: emotion_range*(1000/10)+'%'})
-          p= "Emotion Rang: "+(emotion_range * (1000/10)).toFixed(2) + '%'
+          p= "Emotion Range: "+(emotion_range * (1000/10)).toFixed(2) + '%'
       div.border
       form(method='get' action='/')
         div.form-group

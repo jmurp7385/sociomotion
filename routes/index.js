@@ -85,7 +85,7 @@ router.get('/search/:screen_name', function(req, res, next) {
           agreeableness     = response['document_tone']['tone_categories'][2]['tones'][3]['score'];
           emotion_range     = response['document_tone']['tone_categories'][2]['tones'][4]['score'];          
         }
-        res.redirect('/emotion/'+anger+'/'+disgust+'/'+fear+'/'+
+        res.redirect('/'+process.env.screen_name+'/emotion/'+anger+'/'+disgust+'/'+fear+'/'+
                       joy+'/'+sadness+'/'+analytical+'/'+confident+'/'+
                       tentative+'/'+openness+'/'+conscientiousness+'/'+
                       extraversion+'/'+agreeableness+'/'+emotion_range);
@@ -98,8 +98,9 @@ router.get('/search/:screen_name', function(req, res, next) {
   });
 });
 
-router.get('/emotion/:anger/:disgust/:fear/:joy/:sadness/:analytical/:confident/:tentative/:openness/:conscientiousness/:extraversion/:agreeableness/:emotion_range', function(req, res, next) {
-      res.render('emotion', { title2: 'Emotions for @'+ process.env.screen_name, 
+router.get('/:screen_name/emotion/:anger/:disgust/:fear/:joy/:sadness/:analytical/:confident/:tentative/:openness/:conscientiousness/:extraversion/:agreeableness/:emotion_range', function(req, res, next) {
+      res.render('emotion', { title2: 'Emotions for @',
+                              name: req.params.screen_name, 
                               anger: req.params.anger,
                               disgust: req.params.disgust,
                               fear: req.params.fear,
