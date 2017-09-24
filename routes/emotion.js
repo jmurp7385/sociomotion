@@ -8,7 +8,7 @@ var joyFloat = .80;
 var sadnessFloat = .2;
 
 router.get('/', function(req, res, next) {
-    res.render('emotion', { anger: angerFloat, digust: digustFloat, fear: fearFloat, joy: joyFloat, sadness: sadnessFloat });
+    res.render('emotion', { title2: 'Stats', anger: 'angerFloat', digust: 'digustFloat', fear: 'fearFloat', joy: 'joyFloat', sadness: 'sadnessFloat' });
   });
 
 module.exports = router;
