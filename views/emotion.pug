@@ -1,8 +1,10 @@
 extends layout
 
-block content   
-    h1.title-emotions= title2
-    h1.name= name
+block content
+    div(style={'clear': 'both','margin-bottom': '80px'})
+      h1.title-emotions= title2
+      h1.name= name
+    //- div.border  
     div.center        
       button#emotional.selected Emotional
       button#language Language

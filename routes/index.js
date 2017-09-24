@@ -99,8 +99,8 @@ router.get('/search/:screen_name', function(req, res, next) {
 });
 
 router.get('/:screen_name/emotion/:anger/:disgust/:fear/:joy/:sadness/:analytical/:confident/:tentative/:openness/:conscientiousness/:extraversion/:agreeableness/:emotion_range', function(req, res, next) {
-      res.render('emotion', { title2: 'Emotions for @',
-                              name: req.params.screen_name, 
+      res.render('emotion', { title2: 'Analysis of ',
+                              name: '@'+req.params.screen_name, 
                               anger: req.params.anger,
                               disgust: req.params.disgust,
                               fear: req.params.fear,

@@ -13,11 +13,14 @@ body {
 .title-emotions{ 
   font: 50px "Lobster Two", cursive;
   width: 45%;
-  margin: auto;
+  text-align: right;
+  float: left;
 }
 
 .name {
-  width: 45%;
+  width: 53%;
+  float: right;
+  text-align: left;
 }
 
 a {
@@ -30,7 +33,7 @@ h1 {
   padding: 5px;
   color: #fff;
   font-size: 50px;
-  display: table;
+  /*display: table;*/
 }
 
 p {
