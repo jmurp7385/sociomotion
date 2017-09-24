@@ -3,6 +3,11 @@ var router = express.Router();
 var Twitter = require('twitter');
 var fs = require('fs');
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
+var Spinner = require('cli-spinner').Spinner;
+ 
+var spinner = new Spinner('processing.. %s');
+spinner.setSpinnerString('|/-\\');
+spinner.start();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

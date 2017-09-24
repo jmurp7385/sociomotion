@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1.main-title= title
+  h1.main-title.shake= title
   p Analyze the emotional undertones of a twitter user's tweets.
 
   form(method='POST' action='/search')
@@ -9,3 +9,4 @@ block content
       label(for='screen_name')
       input#screen_name.form-control(type='text', placeholder='Twitter Handle' name='screen_name')
       input#search_button.form-control(type='submit', value='Search')
+  

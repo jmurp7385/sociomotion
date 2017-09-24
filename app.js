@@ -6,9 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session =  require('express-session');
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').load();
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   require('dotenv').load();
+// }
 
 var index = require('./routes/index');
 var users = require('./routes/users');

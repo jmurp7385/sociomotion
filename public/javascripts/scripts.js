@@ -31,6 +31,7 @@
     document.getElementById('social').classList.add('selected');
   });
 
+
   // $('#emotional').onclick(() => {
   //   $('.emotional-graph').removeClass('hide');
   //   $('.lang-graph').addClass('hide');
