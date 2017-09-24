@@ -1,10 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Twitter = require('twitter');
-const fs = require('fs');
-
-let writeStream = fs.createWriteStream('tweets.json');
-
+var fs = require('fs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -41,17 +38,19 @@ router.get('/search/:screen_name', function(req, res, next) {
   var params = {screen_name: req.params.screen_name};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {      
+      fs.unlinkSync('tweets.json');
+      console.log('File deleted');
+      var writeStream = fs.createWriteStream('tweets.json');
       for(x=0;x < tweets.length; x++){        
         sentences += " " + tweets[x]['text'];
       }      
-      json = {'text': sentences};
+      var json = {'text': sentences};
       var json_string = JSON.stringify(json);
-      writeStream.write(json_string);
+      writeStream.write(json_string);  
       writeStream.on('finish', () => {  
-          console.log('wrote all data to file');
-          console.log(tweets.json);
-          writeStream.end('end');
+          console.log('wrote all data to file');          
       });
+      writeStream.end();
 
       res.render('tweets', { title: 'Tweets',tweets: tweets });
     } else {

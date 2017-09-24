@@ -9,22 +9,23 @@ var tone_analyzer = new ToneAnalyzerV3({
   version_date: '2017-09-18'
 });
 
-var params = {
-  // Get the text from the JSON file.
-  text: 'tweets.json',
-  tones: 'emotion'
-};
-
-var responseValues = [];
-var nameVariables = [];
-
 router.get('/', function(req, res, next) {
+  
+  var params = {
+    // Get the text from the JSON file.
+    text: require('../tweets').text,
+    tones: 'emotion'
+  };
+
+  var responseValues = [];
+  var nameVariables = [];
+
   tone_analyzer.tone(params, function(error, response) {
     if (error){
       console.log('error:', error);
     }
     else {
-      console.log(JSON.stringify(response, null, 2));
+      // console.log(JSON.stringify(response, null, 2));
       for (var i = 0; i < 5; i++) {
         responseValues[i] = response['document_tone']['tone_categories'][0]['tones'][i]['score'];
         nameVariables[i] = response['document_tone']['tone_categories'][0]['tones'][i]['tone_name'];
@@ -40,7 +41,7 @@ router.get('/', function(req, res, next) {
 
       var graphOptions = {filename: "basic-bar", fileopt: "overwrite"};
       plotly.plot(data, graphOptions, function(err, msg) {
-        console.log(msg);
+        // console.log(msg);
         res.render('emotion', { title2: 'Stats', anger: responseValues[0], digust: responseValues[1], fear: responseValues[2], joy: responseValues[3], sadness: responseValues[4]});
       });      
     }
