@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 var Twitter = require('twitter');
 
-/* GET home page. */
+/* GET tweets. */
 router.get('/search', function(req, res, next) {
-  res.render('index', { title: 'Seach a user' });
-   
+  
+  console.log(req)
   var client = new Twitter({
     consumer_key: 'GyeiEZokW8JWnP5Hdh7EOQtYO',
     consumer_secret: 'BFhddugDswIaDPBcSjvMuPRBGYtoZa4pckqVx7yi5ZUebpC341',
@@ -17,6 +17,9 @@ router.get('/search', function(req, res, next) {
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {
       console.log(tweets);
+      res.render('tweets', { title: 'Tweets',tweets: tweets });
     }
   });
 });
+
+module.exports = router;
