@@ -36,6 +36,35 @@ p {
   margin-right: 10px;
 }
 
+.anger {
+  background-color: #f00;
+  max-width: 100%;
+}
+
+.disgust {
+  background-color: #0f0;
+  max-width: 100%;
+}
+
+.fear {
+  background-color: #000;
+  max-width: 100%;
+}
+
+.joy {
+  background-color: #ff0;
+  max-width: 100%;  
+}
+
+div.joy>p {
+  color: #000;
+}
+
+.sadness {
+  background-color: #455566;
+  max-width: 100%;
+}
+
 #graph {
   text-align: center;
   margin: 0 auto;
