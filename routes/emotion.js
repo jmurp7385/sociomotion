@@ -2,16 +2,25 @@ var plotly = require('plotly')("njvanhaute", "ea4yKWKZ9ELfBXpLDHXz");
 var express = require('express');
 var router = express.Router();
 
-var angerFloat = 0.68;
-var digustFloat = 0.42;
-var fearFloat = 0.32;
-var joyFloat = .80;
-var sadnessFloat = .2;
+var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
+var tone_analyzer = new ToneAnalyzerV3({
+  username: '{username}',
+  password: '{password}',
+  version_date: '{version}'
+});
+//reponse = JSON object returned by IBM api
+var response = x;
+var responseValues = [];
+for (var i = 0; i < 5; i++)
+{
+  responseValues[i] = response[0][0][0][i][score];
+}
+var nameVariables = ["Anger", "Disgust", "Fear", "Joy", "Sadness"];
 
 var data = [
   {
-    x: ["giraffes", "orangutans", "monkeys"],
-    y: [20, 14, 23],
+    x: nameVariables,
+    y: responseValues,
     type: "bar"
   }
 ];
