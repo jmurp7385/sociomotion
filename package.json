@@ -16,6 +16,7 @@
     "plotly": "^1.0.6",
     "pug": "~2.0.0-beta11",
     "serve-favicon": "~2.4.2",
-    "twitter": "^1.7.1"
+    "twitter": "^1.7.1",
+    "watson-developer-cloud": "^2.39.0"
   }
 }
