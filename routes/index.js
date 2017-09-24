@@ -16,7 +16,7 @@ router.post('/search', function(req, res, next) {
 
 router.get('/search/:screen_name', function(req, res, next) {
   // res.send(req.params.screen_name)
-  
+
   var client = new Twitter({
     consumer_key: 'GyeiEZokW8JWnP5Hdh7EOQtYO',
     consumer_secret: 'BFhddugDswIaDPBcSjvMuPRBGYtoZa4pckqVx7yi5ZUebpC341',

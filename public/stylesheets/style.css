@@ -6,3 +6,26 @@ body {
 a {
   color: #00B7FF;
 }
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+#screen_name {
+  width: 80%;
+  height: 25px;
+  font-size: 16px;
+}
+
+#search_button {
+  width: 19%;
+  height: 50px;
+  background: #0066A2;
+  color: white;
+  border-style: outset;
+  border-color: #0066A2;
+  font: bold 15px arial, sans-serif;
+  text-shadow:none;
+}
