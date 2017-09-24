@@ -1,3 +1,6 @@
+var express = require('express');
+var router = express.Router();
+
 var angerFloat = 0.68;
 var digustFloat = 0.42;
 var fearFloat = 0.32;
