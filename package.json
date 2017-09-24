@@ -10,6 +10,7 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "express-session": "^1.15.5",
     "morgan": "~1.8.1",
     "node-twitter-api": "^1.8.0",
     "nodemon": "^1.12.1",
