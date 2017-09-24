@@ -6,6 +6,10 @@ body {
   width: 90%;
 }
 
+#main-title {
+  font: 50px "Lobster Two", cursive;
+}
+
 a {
   color: #aa6c39;
 }
@@ -20,8 +24,8 @@ h1 {
 
 p {
   color: #fff;
-  font-size: 15px;
-  /*text-align: center;*/
+  font-size: 30px;
+  text-align: center;
 }
 
 .center {
@@ -128,6 +132,7 @@ div.joy>p {
   border-radius: 5px;
   border-style: none;
   box-shadow: 2px 2px 2px #000;
+  vertical-align: middle;
 }
 
 *:focus {
@@ -144,7 +149,8 @@ div.joy>p {
   border-style: outset;
   border-color: #2d882d;
   border-radius: 5px;
-  font: bold 15px arial, sans-serif;
+  font: bold 20px arial, sans-serif;
   text-shadow:none;
   display: inline-block;
+  vertical-align: middle;
 }
