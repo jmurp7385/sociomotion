@@ -2,14 +2,10 @@ extends layout
 
 block content 
     h1= title2
-    div.center  
-      div.row
-        button#emotional.selected       
-          p Emotional
-        button#language
-          p Language
-        button#social
-          p Social
+    div.center        
+      button#emotional.selected Emotional            
+      button#language Language        
+      button#social Social      
       div#emotional-graph
         div.border  
         div.anger(style={width: anger*(1000/10)+'%'})
@@ -60,5 +56,5 @@ block content
       
       form(method='get' action='/')
         div.form-group
-          input#search_button.form-control(type='submit', value='Search Another')        
+          input#search_again.form-control(type='submit', value='Search Another')        
     script(src='/javascripts/scripts.js')    

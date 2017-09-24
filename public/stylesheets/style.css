@@ -32,11 +32,22 @@ button {
   background-color: transparent;
   border-color: transparent;
   width: 33%;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
 }
 
 button.selected {
   background-color: #9a2929;
   margin-top: -10px;
+  transform: translateY(10px);
+}
+
+.border {
+  border-top: outset;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .hide {
@@ -124,12 +135,6 @@ div.joy>p {
   max-width: 100%;
 }
 
-.border {
-  border-top: outset;
-  width: 100%;
-  margin-top: 10px;
-}
-
 #graph {
   text-align: center;
   margin: 0 auto;
@@ -169,3 +174,21 @@ div.joy>p {
   display: inline-block;
   vertical-align: middle;
 }
+
+
+#search_again {
+  width: 200px;
+  height: 59px;  
+  background: #2d882d;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  border-style: outset;
+  border-color: #2d882d;
+  border-radius: 5px;
+  font: bold 20px arial, sans-serif;
+  text-shadow:none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
