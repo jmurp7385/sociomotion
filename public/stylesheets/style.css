@@ -65,6 +65,52 @@ div.joy>p {
   max-width: 100%;
 }
 
+.analytical {
+  background-color: #326BA3;
+  max-width: 100%;
+}
+
+.confident {
+  background-color: #326BA3;
+  max-width: 100%;
+}
+
+.tentative {
+  background-color: #326BA3;
+  max-width: 100%;
+}
+
+.openneess {
+  background-color: #326BA3;
+  max-width: 100%;
+}
+
+.conscientiousness {
+  background-color: #326BA3;
+  max-width: 100%;
+}
+
+.extroversion {
+  background-color: #326BA3;
+  max-width: 100%;
+}
+
+.agreeableness {
+  background-color: #326BA3;
+  max-width: 100%;
+}
+
+.emotion_range {
+  background-color: #326BA3;
+  max-width: 100%;
+}
+
+.border {
+  border-top: outset;
+  width: 100%;
+  margin-top: 10px;
+}
+
 #graph {
   text-align: center;
   margin: 0 auto;

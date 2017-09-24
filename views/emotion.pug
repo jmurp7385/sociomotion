@@ -18,6 +18,32 @@ block content
       div.sadness(style={width: sadness*(1000/10)+'%'})
         p= "Sadness: "
         p= (sadness * (1000/10)).toFixed(2) + '%'
+      div.border
+      div.analytical(style={width: analytical*(1000/10)+'%'})
+        p= "Analytical: "
+        p= (analytical * (1000/10)).toFixed(2) + '%'
+      div.confident(style={width: confident*(1000/10)+'%'})
+        p= "confident: "
+        p= (confident * (1000/10)).toFixed(2) + '%'
+      div.tentative(style={width: tentative*(1000/10)+'%'})
+        p= "tentative: "
+        p= (tentative * (1000/10)).toFixed(2) + '%'
+      div.border  
+      div.openness(style={width: openness*(1000/10)+'%'})
+        p= "openness: "
+        p= (openness * (1000/10)).toFixed(2) + '%'
+      div.conscientiousness(style={width: conscientiousness*(1000/10)+'%'})
+        p= "conscientiousness: "
+        p= (conscientiousness * (1000/10)).toFixed(2) + '%'
+      div.extraversion(style={width: extraversion*(1000/10)+'%'})
+        p= "extraversion: "
+        p= (extraversion * (1000/10)).toFixed(2) + '%'
+      div.agreeableness(style={width: agreeableness*(1000/10)+'%'})
+        p= "agreeableness: "
+        p= (agreeableness * (1000/10)).toFixed(2) + '%'
+      div.emotion_range(style={width: emotion_range*(1000/10)+'%'})
+        p= "emotion_range: "
+        p= (emotion_range * (1000/10)).toFixed(2) + '%'  
       //- div
         //- iframe#graph(width='900' height='800', frameborder='0', scrolling="no", src="//plot.ly/~njvanhaute/0.embed")
     
