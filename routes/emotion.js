@@ -1,6 +1,7 @@
 var plotly = require('plotly')("njvanhaute", "ea4yKWKZ9ELfBXpLDHXz");
 var express = require('express');
 var router = express.Router();
+var fs = require('fs');
 
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 var tone_analyzer = new ToneAnalyzerV3({
@@ -10,7 +11,7 @@ var tone_analyzer = new ToneAnalyzerV3({
 });
 
 router.get('/', function(req, res, next) {
-  
+
   var params = {
     // Get the text from the JSON file.
     text: require('../tweets').text,
@@ -42,6 +43,7 @@ router.get('/', function(req, res, next) {
       var graphOptions = {filename: "basic-bar", fileopt: "overwrite"};
       plotly.plot(data, graphOptions, function(err, msg) {
         // console.log(msg);
+        fs.unlinkSync('tweets.json');
         res.render('emotion', { title2: 'Stats', anger: responseValues[0], digust: responseValues[1], fear: responseValues[2], joy: responseValues[3], sadness: responseValues[4]});
       });      
     }

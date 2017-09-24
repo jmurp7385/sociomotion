@@ -38,7 +38,7 @@ router.get('/search/:screen_name', function(req, res, next) {
   var params = {screen_name: req.params.screen_name};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {      
-      fs.unlinkSync('tweets.json');
+      // fs.unlinkSync('tweets.json');
       console.log('File deleted');
       var writeStream = fs.createWriteStream('tweets.json');
       for(x=0;x < tweets.length; x++){        
