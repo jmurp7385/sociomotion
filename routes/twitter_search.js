@@ -3,8 +3,8 @@ var router = express.Router();
 var Twitter = require('twitter');
 
 /* GET tweets. */
-router.get('/search', function(req, res, next) {
-  
+router.get('/:screen_name', function(req, res, next) {
+  res.send(req.params.screen_name)
   console.log(req)
   var client = new Twitter({
     consumer_key: 'GyeiEZokW8JWnP5Hdh7EOQtYO',
@@ -12,7 +12,7 @@ router.get('/search', function(req, res, next) {
     access_token_key: '606667045-Vqoqd3tDXknDgBLXSFApDBYVyZFJvhx5Sxh5pc2f',
     access_token_secret: 'hoxNk7cGvZRomAFmfsol3DW4LkmblRf6HGJzi7zu81R4C'
   });
-   
+  
   var params = {screen_name: 'joeymurphy385'};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {
