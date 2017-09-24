@@ -2,5 +2,7 @@ extends layout
 
 block content
   h1= title
-  p= tweets
+  //- p= tweets
+  each tweet in tweets
+    p= tweet.text
   

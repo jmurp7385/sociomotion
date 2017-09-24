@@ -27,7 +27,11 @@ router.get('/search/:screen_name', function(req, res, next) {
   var params = {screen_name: req.params.screen_name};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {
-      console.log(tweets);
+      for(x=0;x < tweets.length; x++){
+        console.log(tweets[x]['text']);
+
+      }
+
       res.render('tweets', { title: 'Tweets',tweets: tweets });
     } else {
       res.send(error)
