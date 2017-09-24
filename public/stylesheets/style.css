@@ -24,6 +24,24 @@ p {
   /*text-align: center;*/
 }
 
+.center {
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.emo {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#graph {
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+}
+
 #screen_name {
   width: 80%;
   height: 50px;
